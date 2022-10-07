@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <title>Richard Kim Madamag | Portfolio</title>
+</head>
+
+<body class="light" id="top">
+  <header class="header center">
+    <h3>
+      <a href="https://rajshekhar26.github.io/cleanfolio-minimal" class="link">RM.</a>
+    </h3>
+
+    <nav class="nav center">
+      <ul class="nav__list center">
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#projects">Projects</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#skills">Skills</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      <button type="button" aria-label="toggle theme" class="btn btn--icon">
+        <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+      </button>
+
+      <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+        <i aria-hidden="true" class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About -->
+    <div class="about center">
+      <h1>Hi, I am <span class="about__name">Richard Kim</span></h1>
+      <h2 class="about__role">A Full Stack Developer.</h2>
+      <p class="about__desc">
+        Hey! How are you? By the way, I'm Richard Kim Madamag, you can
+        call me Kim, a Software Engineer based in Philippines. I used
+        to be a developer since 2018 an mainly focusing in the development
+        of Web Applications using Angular and .NET Technologies. I also do
+        some Mobile development using Xamarin. And Lastly, I Love Coffee. 
+        <br><br>
+        Could you give me some? Appreciated!
+      </p>
+
+      <div class="about__contact center">
+        <a href="https://mega.nz/file/xwk0WSzA#fQyM-UbXNGzHF2cR0aJtswepfjQQraF2lewr54MqcNA" target="_blank">
+          <span class="btn btn--outline">Resume</span>
+        </a>
+
+        <a href="https://github.com/kinnrichard?tab=repositories" target="_blank" aria-label="github"
+          class="link link--icon">
+          <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/richard-kim-madamag/" target="_blank" aria-label="linkedin"
+          class="link link--icon">
+          <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <section id="projects" class="section projects">
+      <h2 class="section__title">Projects</h2>
+
+      <div class="projects__grid">
+        <div class="project">
+          <h3>NetQR Mobile</h3>
+          <p class="project__description">
+            a mobile attendance tracker that captures Time in
+            and Time out of user using QR Code that sync to
+            the server.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">C#</li>
+            <li class="project__stack-item">Xamarin</li>
+            <li class="project__stack-item">.NET Core</li>
+            <li class="project__stack-item">ASP.NET Core Web API / Firebase</li>
+          </ul>
+
+          <a href="https://github.com" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Kanegosyo App</h3>
+          <p class="project__description">
+            an ordering system for Batangas Premium that
+            process distributors order from the top-line to
+            their down-line.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">ASP.NET Core</li>
+            <li class="project__stack-item">C#</li>
+            <li class="project__stack-item">Razor</li>
+            <li class="project__stack-item">MS SQL Server</li>
+          </ul>
+
+          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon" target="_blank">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://bpkanegosyo.com" aria-label="live preview" class="link link--icon" target="_blank">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Batangas Premium</h3>
+          <p class="project__description">
+            Batangas Premium website that shows the company
+            information, products, achievements and the visions.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">HTML</li>
+            <li class="project__stack-item">CSS</li>
+            <li class="project__stack-item">JavaScript</li>
+            <li class="project__stack-item">Razor</li>
+            <li class="project__stack-item">ASP.NET Cores</li>
+          </ul>
+
+          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://mock.batangaspremium.com" aria-label="live preview" class="link link--icon" target="_blank">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>BlueTime Attendance</h3>
+          <p class="project__description">
+            is a web application the view the capture attendance
+            data of the users and consolidate it by cut offs and by
+            users.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">Angular</li>
+            <li class="project__stack-item">ASP.NET Core Web API</li>
+            <li class="project__stack-item">C#</li>
+            <li class="project__stack-item">HTML</li>
+            <li class="project__stack-item">CSS</li>
+            <li class="project__stack-item">JavaScript</li>
+          </ul>
+
+          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Kinnitech Softwares Website</h3>
+          <p class="project__description">
+            Kinnitech Softwares website displaying their
+            services, projects and information.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">HTML</li>
+            <li class="project__stack-item">CSS</li>
+            <li class="project__stack-item">JavaScript</li>
+            <li class="project__stack-item">Razor</li>
+            <li class="project__stack-item">ASP.NET Cores</li>
+          </ul>
+
+          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://kinn-softwares.tech" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>ABIS</h3>
+          <p class="project__description">
+            Attendance Biometric Identification System. is a desktop
+            application that capture attendance of users directly to
+            the server.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">FileMaker Pro</li>
+            
+          </ul>
+
+          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+      <h2 class="section__title">Skills</h2>
+      <ul class="skills__list">
+        <li class="skills__list-item btn btn--plain">C#</li>
+        <li class="skills__list-item btn btn--plain">Angular</li>
+        <li class="skills__list-item btn btn--plain">TypeScript</li>
+        <li class="skills__list-item btn btn--plain">ASP.NET Core</li>
+        <li class="skills__list-item btn btn--plain">HTML</li>
+        <li class="skills__list-item btn btn--plain">CSS</li>
+        <li class="skills__list-item btn btn--plain">JavaScript</li>
+        <li class="skills__list-item btn btn--plain">Git</li>
+        <li class="skills__list-item btn btn--plain">Material UI</li>
+        <li class="skills__list-item btn btn--plain">MS SQL Server</li>
+        <li class="skills__list-item btn btn--plain">Xamarin</li>
+        <li class="skills__list-item btn btn--plain">FileMaker Pro</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact center" id="contact">
+      <h2 class="section__title">Contact</h2>
+      <a href="mailto:richardkimmadamag@gmail.com" target="_blank">
+        <span class="btn btn--outline">Email me</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="link footer__link">
+    </a>
+  </footer>
+
+  <div class="scroll-container">
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
