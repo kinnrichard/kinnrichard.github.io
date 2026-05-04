@@ -49,32 +49,39 @@ const displayList = () => {
 
 btnHamburger.addEventListener('click', displayList)
 
-const scrollUp = () => {
-	const btnScrollTop = document.querySelector('.scroll-top')
+// Scroll to top button
+const btnScrollTop = document.querySelector('.scroll-top')
 
+const scrollUp = () => {
 	if (
 		body.scrollTop > 500 ||
 		document.documentElement.scrollTop > 500
 	) {
-		btnScrollTop.style.display = 'block'
+		btnScrollTop.classList.add('show')
+		btnScrollTop.style.display = 'flex'
 	} else {
-		btnScrollTop.style.display = 'none'
+		btnScrollTop.classList.remove('show')
+		setTimeout(() => {
+			if (!btnScrollTop.classList.contains('show')) {
+				btnScrollTop.style.display = 'none'
+			}
+		}, 300)
 	}
 }
 
 document.addEventListener('scroll', scrollUp)
 
-// Scroll animations
+// Scroll animations with stagger
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
+  rootMargin: '0px 0px -40px 0px'
 }
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, index) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const el = entry.target
-      const delay = el.dataset.delay || 0
+      const delay = parseInt(el.dataset.delay) || 0
       setTimeout(() => {
         el.classList.add('visible')
       }, delay)
@@ -83,9 +90,30 @@ const observer = new IntersectionObserver((entries) => {
   })
 }, observerOptions)
 
-document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach((el, i) => {
-  el.dataset.delay = Math.min(i * 80, 400)
-  observer.observe(el)
+// Stagger project cards within the grid
+document.querySelectorAll('.projects__grid').forEach((grid) => {
+  grid.querySelectorAll('.fade-in').forEach((el, i) => {
+    el.dataset.delay = i * 100
+    observer.observe(el)
+  })
+})
+
+// Stagger skill categories
+document.querySelectorAll('.skills__categories').forEach((container) => {
+  container.querySelectorAll('.scale-in').forEach((el, i) => {
+    el.dataset.delay = i * 120
+    observer.observe(el)
+  })
+})
+
+// Observe all other animated elements
+document.querySelectorAll('.fade-in, .scale-in, .slide-in-left, .slide-in-right').forEach((el) => {
+  if (!el.dataset.delay) {
+    el.dataset.delay = 0
+  }
+  if (!el.classList.contains('visible')) {
+    observer.observe(el)
+  }
 })
 
 // Typing effect
@@ -127,5 +155,23 @@ if (typingElement) {
     setTimeout(type, typingSpeed)
   }
 
-  setTimeout(type, 1000)
+  setTimeout(type, 800)
 }
+
+// Smooth parallax on scroll for hero section
+let ticking = false
+const hero = document.querySelector('.about')
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const scrolled = window.scrollY
+      if (hero && scrolled < 800) {
+        hero.style.transform = `translateY(${scrolled * 0.15}px)`
+        hero.style.opacity = Math.max(1 - scrolled / 700, 0)
+      }
+      ticking = false
+    })
+    ticking = true
+  }
+})
