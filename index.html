@@ -53,9 +53,11 @@
   <main>
     <!-- About -->
     <div class="about center">
-      <h1>Hi, I am <span class="about__name">Richard Kim</span></h1>
-      <h2 class="about__role">Full Stack Developer | AI-Assisted Development</h2>
-      <p class="about__desc">
+      <h1 class="fade-in">Hi, I am <span class="about__name">Richard Kim</span></h1>
+      <h2 class="about__role fade-in">
+        <span class="typing-text" id="typing-text"></span>
+      </h2>
+      <p class="about__desc fade-in">
         Hey! Welcome to my Profile. By the way, I'm Richard Kim Madamag, you can
         call me Kim, a Full Stack Developer based in the Philippines.
         I am a developer since 2018, currently focusing on building web applications
@@ -67,7 +69,7 @@
         I can be part of your team! Don't hesitate to contact me. :)
       </p>
 
-      <div class="about__contact center">
+      <div class="about__contact center fade-in">
         <a href="https://mega.nz/file/4gUm0b6S#2HsHYPoQqhbKUtp5xmQ2JRCthd7hoEDloAqdLr2M_98" target="_blank" rel="noopener noreferrer">
           <span class="btn btn--outline">curriculum vitae</span>
         </a>
@@ -84,301 +86,409 @@
       </div>
     </div>
 
+    <!-- Wave Divider -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,0 C300,60 900,0 1200,60 L1200,60 L0,60 Z"></path>
+      </svg>
+    </div>
+
     <!-- Projects -->
-    <section id="projects" class="section projects">
-      <h2 class="section__title">Projects</h2>
+    <section id="projects" class="section section--alt projects">
+      <h2 class="section__title fade-in">Projects</h2>
 
-      <div class="projects__grid">
-        <div class="project">
-          <h3>DenTrackPro</h3>
-          <p class="project__description">
-            A dental management system for managing patient records,
-            appointments, treatments, and billing.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">Next.js</li>
-            <li class="project__stack-item">Tailwind CSS</li>
-            <li class="project__stack-item">NestJS</li>
-            <li class="project__stack-item">PostgreSQL</li>
-            <li class="project__stack-item">Prisma</li>
-            <li class="project__stack-item">Docker</li>
-            <li class="project__stack-item">Monorepo</li>
-          </ul>
-
-          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="https://demo.dentro.clinic" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+      <div class="projects__grid" style="max-width:1100px;width:95%;margin:0 auto;">
+        <div class="project fade-in">
+          <div class="project__header">
+            <h3>DenTrackPro</h3>
+          </div>
+          <div class="project__body">
+            <p class="project__description">
+              A dental management system for managing patient records,
+              appointments, treatments, and billing.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Next.js</li>
+              <li class="project__stack-item">Tailwind CSS</li>
+              <li class="project__stack-item">NestJS</li>
+              <li class="project__stack-item">PostgreSQL</li>
+              <li class="project__stack-item">Prisma</li>
+              <li class="project__stack-item">Docker</li>
+              <li class="project__stack-item">Monorepo</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+              <a href="https://demo.dentro.clinic" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="project">
-          <h3>CoinTrack</h3>
-          <p class="project__description">
-            An HRIS and payroll system for managing employee records,
-            attendance, leave, and payroll processing.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">Next.js</li>
-            <li class="project__stack-item">Tailwind CSS</li>
-            <li class="project__stack-item">NestJS</li>
-            <li class="project__stack-item">PostgreSQL</li>
-            <li class="project__stack-item">Prisma</li>
-            <li class="project__stack-item">Docker</li>
-            <li class="project__stack-item">Monorepo</li>
-          </ul>
-
-          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="https://app-staging.cointrackpro.com" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+        <div class="project fade-in">
+          <div class="project__header">
+            <h3>CoinTrack</h3>
+          </div>
+          <div class="project__body">
+            <p class="project__description">
+              An HRIS and payroll system for managing employee records,
+              attendance, leave, and payroll processing.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Next.js</li>
+              <li class="project__stack-item">Tailwind CSS</li>
+              <li class="project__stack-item">NestJS</li>
+              <li class="project__stack-item">PostgreSQL</li>
+              <li class="project__stack-item">Prisma</li>
+              <li class="project__stack-item">Docker</li>
+              <li class="project__stack-item">Monorepo</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+              <a href="https://app-staging.cointrackpro.com" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="project">
-          <h3>Timeline</h3>
-          <p class="project__description">
-            A queueing system for managing customer flow,
-            wait times, and service prioritization.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">Next.js</li>
-            <li class="project__stack-item">Tailwind CSS</li>
-            <li class="project__stack-item">NestJS</li>
-            <li class="project__stack-item">PostgreSQL</li>
-            <li class="project__stack-item">Prisma</li>
-            <li class="project__stack-item">Docker</li>
-            <li class="project__stack-item">Monorepo</li>
-          </ul>
-
-          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="https://demo.timelineqms.app" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+        <div class="project fade-in">
+          <div class="project__header">
+            <h3>Timeline</h3>
+          </div>
+          <div class="project__body">
+            <p class="project__description">
+              A queueing system for managing customer flow,
+              wait times, and service prioritization.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Next.js</li>
+              <li class="project__stack-item">Tailwind CSS</li>
+              <li class="project__stack-item">NestJS</li>
+              <li class="project__stack-item">PostgreSQL</li>
+              <li class="project__stack-item">Prisma</li>
+              <li class="project__stack-item">Docker</li>
+              <li class="project__stack-item">Monorepo</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+              <a href="https://demo.timelineqms.app" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="project">
-          <h3>NetQR Mobile</h3>
-          <p class="project__description">
-            a mobile attendance tracker that captures Time in
-            and Time out of user using QR Code that sync to
-            the server.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">C#</li>
-            <li class="project__stack-item">Xamarin</li>
-            <li class="project__stack-item">.NET Core</li>
-            <li class="project__stack-item">ASP.NET Core Web API / Firebase</li>
-          </ul>
-
-          <a href="https://github.com" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
+        <div class="project fade-in">
+          <div class="project__header">
+            <h3>NetQR Mobile</h3>
+          </div>
+          <div class="project__body">
+            <p class="project__description">
+              A mobile attendance tracker that captures Time in
+              and Time out of user using QR Code that sync to
+              the server.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">C#</li>
+              <li class="project__stack-item">Xamarin</li>
+              <li class="project__stack-item">.NET Core</li>
+              <li class="project__stack-item">ASP.NET Core Web API</li>
+              <li class="project__stack-item">Firebase</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="project">
-          <h3>Kanegosyo App</h3>
-          <p class="project__description">
-            an ordering system for Batangas Premium that
-            process distributors order from the top-line to
-            their down-line.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">ASP.NET Core</li>
-            <li class="project__stack-item">C#</li>
-            <li class="project__stack-item">Razor</li>
-            <li class="project__stack-item">MS SQL Server</li>
-          </ul>
-
-          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon" target="_blank" rel="noopener noreferrer">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="https://bpkanegosyo.com" target="_blank" aria-label="live preview" class="link link--icon" rel="noopener noreferrer">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+        <div class="project fade-in">
+          <div class="project__header">
+            <h3>Kanegosyo App</h3>
+          </div>
+          <div class="project__body">
+            <p class="project__description">
+              An ordering system for Batangas Premium that
+              process distributors order from the top-line to
+              their down-line.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">ASP.NET Core</li>
+              <li class="project__stack-item">C#</li>
+              <li class="project__stack-item">Razor</li>
+              <li class="project__stack-item">MS SQL Server</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon" target="_blank" rel="noopener noreferrer">
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+              <a href="https://bpkanegosyo.com" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="project">
-          <h3>Batangas Premium</h3>
-          <p class="project__description">
-            Batangas Premium website that shows the company
-            information, products, achievements and the visions.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">HTML</li>
-            <li class="project__stack-item">CSS</li>
-            <li class="project__stack-item">JavaScript</li>
-            <li class="project__stack-item">Razor</li>
-            <li class="project__stack-item">ASP.NET Core</li>
-          </ul>
-
-          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="https://mock.batangaspremium.com" target="_blank" aria-label="live preview" class="link link--icon" rel="noopener noreferrer">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+        <div class="project fade-in">
+          <div class="project__header">
+            <h3>Batangas Premium</h3>
+          </div>
+          <div class="project__body">
+            <p class="project__description">
+              Batangas Premium website that shows the company
+              information, products, achievements and the visions.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">HTML</li>
+              <li class="project__stack-item">CSS</li>
+              <li class="project__stack-item">JavaScript</li>
+              <li class="project__stack-item">Razor</li>
+              <li class="project__stack-item">ASP.NET Core</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+              <a href="https://mock.batangaspremium.com" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="project">
-          <h3>BlueTime Attendance</h3>
-          <p class="project__description">
-            is a web application the view the capture attendance
-            data of the users and consolidate it by cut offs and by
-            users.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">Angular</li>
-            <li class="project__stack-item">ASP.NET Core Web API</li>
-            <li class="project__stack-item">C#</li>
-            <li class="project__stack-item">HTML</li>
-            <li class="project__stack-item">CSS</li>
-            <li class="project__stack-item">JavaScript</li>
-          </ul>
-
-          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
+        <div class="project fade-in">
+          <div class="project__header">
+            <h3>BlueTime Attendance</h3>
+          </div>
+          <div class="project__body">
+            <p class="project__description">
+              A web application to view the captured attendance
+              data of the users and consolidate it by cut offs and by
+              users.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Angular</li>
+              <li class="project__stack-item">ASP.NET Core Web API</li>
+              <li class="project__stack-item">C#</li>
+              <li class="project__stack-item">HTML</li>
+              <li class="project__stack-item">CSS</li>
+              <li class="project__stack-item">JavaScript</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="project">
-          <h3>Kinnitech Softwares Website</h3>
-          <p class="project__description">
-            Kinnitech Softwares website displaying their
-            services, projects and information.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">HTML</li>
-            <li class="project__stack-item">CSS</li>
-            <li class="project__stack-item">JavaScript</li>
-            <li class="project__stack-item">Razor</li>
-            <li class="project__stack-item">ASP.NET Core</li>
-          </ul>
-
-          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="https://kinn-softwares.solutions" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+        <div class="project fade-in">
+          <div class="project__header">
+            <h3>Kinnitech Softwares Website</h3>
+          </div>
+          <div class="project__body">
+            <p class="project__description">
+              Kinnitech Softwares website displaying their
+              services, projects and information.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">HTML</li>
+              <li class="project__stack-item">CSS</li>
+              <li class="project__stack-item">JavaScript</li>
+              <li class="project__stack-item">Razor</li>
+              <li class="project__stack-item">ASP.NET Core</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+              <a href="https://kinn-softwares.solutions" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="project">
-          <h3>ABIS</h3>
-          <p class="project__description">
-            Attendance Biometric Identification System. is a desktop
-            application that capture attendance of users directly to
-            the server.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">FileMaker Pro</li>
-            
-          </ul>
-
-          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
+        <div class="project fade-in">
+          <div class="project__header">
+            <h3>ABIS</h3>
+          </div>
+          <div class="project__body">
+            <p class="project__description">
+              Attendance Biometric Identification System. A desktop
+              application that captures attendance of users directly to
+              the server.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">FileMaker Pro</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="project">
-          <h3>MangJose Graphics Borongan PMS</h3>
-          <p class="project__description">
-            Project Monitoring Software with Simple Payroll System for Mang Jose Graphics Borongan to track projects and record customer's information.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">HTML</li>
-            <li class="project__stack-item">CSS</li>
-            <li class="project__stack-item">JavaScript</li>
-            <li class="project__stack-item">Razor</li>
-            <li class="project__stack-item">ASP.NET Core</li>
-          </ul>
-
-          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="http://mangjosegraphics.com" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+        <div class="project fade-in">
+          <div class="project__header">
+            <h3>MangJose Graphics PMS</h3>
+          </div>
+          <div class="project__body">
+            <p class="project__description">
+              Project Monitoring Software with Simple Payroll System for Mang Jose Graphics Borongan to track projects and record customer's information.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">HTML</li>
+              <li class="project__stack-item">CSS</li>
+              <li class="project__stack-item">JavaScript</li>
+              <li class="project__stack-item">Razor</li>
+              <li class="project__stack-item">ASP.NET Core</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+              <a href="http://mangjosegraphics.com" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="project">
-          <h3>DiamondlandBright OPC Official Website</h3>
-          <p class="project__description">
-            DiamondlandBright OPC Official Website for displaying their projects, services and company information.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">HTML</li>
-            <li class="project__stack-item">CSS</li>
-            <li class="project__stack-item">JavaScript</li>
-            <li class="project__stack-item">Razor</li>
-            <li class="project__stack-item">ASP.NET Core</li>
-          </ul>
-
-          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="http://diamondlandbright.com" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+        <div class="project fade-in">
+          <div class="project__header">
+            <h3>DiamondlandBright OPC</h3>
+          </div>
+          <div class="project__body">
+            <p class="project__description">
+              DiamondlandBright OPC Official Website for displaying their projects, services and company information.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">HTML</li>
+              <li class="project__stack-item">CSS</li>
+              <li class="project__stack-item">JavaScript</li>
+              <li class="project__stack-item">Razor</li>
+              <li class="project__stack-item">ASP.NET Core</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+              <a href="http://diamondlandbright.com" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="project">
-          <h3>Jitech Solutions IMS</h3>
-          <p class="project__description">
-            A simple Inventory Management System for Jitech Solutions for managing their internal inventory and tracking its corresponding customer data.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">HTML</li>
-            <li class="project__stack-item">CSS</li>
-            <li class="project__stack-item">JavaScript</li>
-            <li class="project__stack-item">Razor</li>
-            <li class="project__stack-item">ASP.NET Core</li>
-          </ul>
-
-          <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="http://ims.jitech.solutions" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+        <div class="project fade-in">
+          <div class="project__header">
+            <h3>Jitech Solutions IMS</h3>
+          </div>
+          <div class="project__body">
+            <p class="project__description">
+              A simple Inventory Management System for Jitech Solutions for managing their internal inventory and tracking its corresponding customer data.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">HTML</li>
+              <li class="project__stack-item">CSS</li>
+              <li class="project__stack-item">JavaScript</li>
+              <li class="project__stack-item">Razor</li>
+              <li class="project__stack-item">ASP.NET Core</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/kinnrichard?tab=repositories" aria-label="source code" class="link link--icon">
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+              <a href="http://ims.jitech.solutions" target="_blank" rel="noopener noreferrer" aria-label="live preview" class="link link--icon">
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
+    <!-- Wave Divider Bottom -->
+    <div class="section-divider section-divider--bottom">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,60 C300,0 900,60 1200,0 L1200,60 L0,60 Z"></path>
+      </svg>
+    </div>
+
     <!-- Skills -->
     <section class="section skills" id="skills">
-      <h2 class="section__title">Skills</h2>
-      <ul class="skills__list">
-        <li class="skills__list-item btn btn--plain">C#</li>
-        <li class="skills__list-item btn btn--plain">Angular</li>
-        <li class="skills__list-item btn btn--plain">TypeScript</li>
-        <li class="skills__list-item btn btn--plain">ASP.NET Core</li>
-        <li class="skills__list-item btn btn--plain">Next.js</li>
-        <li class="skills__list-item btn btn--plain">NestJS</li>
-        <li class="skills__list-item btn btn--plain">PostgreSQL</li>
-        <li class="skills__list-item btn btn--plain">Docker</li>
-        <li class="skills__list-item btn btn--plain">GitHub Actions</li>
-        <li class="skills__list-item btn btn--plain">HTML</li>
-        <li class="skills__list-item btn btn--plain">CSS</li>
-        <li class="skills__list-item btn btn--plain">JavaScript</li>
-        <li class="skills__list-item btn btn--plain">Git</li>
-        <li class="skills__list-item btn btn--plain">Material UI</li>
-        <li class="skills__list-item btn btn--plain">MS SQL Server</li>
-        <li class="skills__list-item btn btn--plain">Xamarin</li>
-        <li class="skills__list-item btn btn--plain">FileMaker Pro</li>
-        <li class="skills__list-item btn btn--plain">Claude Code (AI)</li>
-        <li class="skills__list-item btn btn--plain">SonarQube</li>
-        <li class="skills__list-item btn btn--plain">OWASP</li>
-      </ul>
+      <h2 class="section__title fade-in">Skills</h2>
+      <div class="skills__categories">
+        <div class="skills__category fade-in">
+          <div class="skills__category-title skills__category-title--frontend">
+            <i class="fas fa-palette"></i> Frontend
+          </div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Next.js</li>
+            <li class="skills__list-item btn btn--plain">Angular</li>
+            <li class="skills__list-item btn btn--plain">TypeScript</li>
+            <li class="skills__list-item btn btn--plain">JavaScript</li>
+            <li class="skills__list-item btn btn--plain">HTML</li>
+            <li class="skills__list-item btn btn--plain">CSS</li>
+            <li class="skills__list-item btn btn--plain">Tailwind CSS</li>
+            <li class="skills__list-item btn btn--plain">Material UI</li>
+          </ul>
+        </div>
+
+        <div class="skills__category fade-in">
+          <div class="skills__category-title skills__category-title--backend">
+            <i class="fas fa-server"></i> Backend
+          </div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">NestJS</li>
+            <li class="skills__list-item btn btn--plain">ASP.NET Core</li>
+            <li class="skills__list-item btn btn--plain">C#</li>
+            <li class="skills__list-item btn btn--plain">PostgreSQL</li>
+            <li class="skills__list-item btn btn--plain">Prisma</li>
+            <li class="skills__list-item btn btn--plain">MS SQL Server</li>
+            <li class="skills__list-item btn btn--plain">FileMaker Pro</li>
+          </ul>
+        </div>
+
+        <div class="skills__category fade-in">
+          <div class="skills__category-title skills__category-title--devops">
+            <i class="fas fa-cloud"></i> DevOps
+          </div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Docker</li>
+            <li class="skills__list-item btn btn--plain">GitHub Actions</li>
+            <li class="skills__list-item btn btn--plain">Git</li>
+            <li class="skills__list-item btn btn--plain">Monorepo</li>
+          </ul>
+        </div>
+
+        <div class="skills__category fade-in">
+          <div class="skills__category-title skills__category-title--tools">
+            <i class="fas fa-tools"></i> Tools & Security
+          </div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Claude Code (AI)</li>
+            <li class="skills__list-item btn btn--plain">SonarQube</li>
+            <li class="skills__list-item btn btn--plain">OWASP</li>
+            <li class="skills__list-item btn btn--plain">Xamarin</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Contact -->
-    <section class="section contact center" id="contact">
+    <section class="section contact center fade-in" id="contact">
       <h2 class="section__title">Contact</h2>
       <a href="mailto:richardkimmadamag@gmail.com">
         <span class="btn btn--outline">Email me</span>
