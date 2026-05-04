@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 9em;
 }
 
 body {
@@ -670,6 +671,116 @@ main {
 }
 
 /*========
+  skip link
+========*/
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--clr-primary);
+  color: var(--clr-bg);
+  padding: 0.5em 1em;
+  z-index: 200;
+  font-size: 0.9rem;
+  border-radius: 0 0 6px 0;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/*========
+  page load animation
+========*/
+
+.page-loading .fade-in,
+.page-loading .scale-in,
+.page-loading .slide-in-left,
+.page-loading .slide-in-right {
+  transition: none;
+}
+
+/*========
+  focus styles
+========*/
+
+*:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 3px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/*========
+  active nav
+========*/
+
+.link--nav.active {
+  color: var(--clr-fg-alt);
+}
+
+.link--nav.active::before {
+  width: 100%;
+}
+
+/*========
+  stats
+========*/
+
+.stats {
+  justify-content: center;
+  gap: 4em;
+  padding: 2em 0;
+  margin-top: 1em;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat__number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--clr-fg-alt);
+  line-height: 1;
+}
+
+.stat__plus {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--clr-fg-alt);
+}
+
+.stat__label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--clr-fg);
+  margin-top: 0.3em;
+  letter-spacing: 0.05em;
+}
+
+/*========
+  contact enhanced
+========*/
+
+.contact__text {
+  color: var(--clr-fg);
+  margin-bottom: 1.5em;
+  font-size: 1rem;
+}
+
+.contact__links {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+/*========
   responsive
 ========*/
 
@@ -730,5 +841,14 @@ main {
 
   .scroll-container {
     display: none;
+  }
+
+  .stats {
+    gap: 2em;
+    flex-wrap: wrap;
+  }
+
+  .stat__number {
+    font-size: 2rem;
   }
 }

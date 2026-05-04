@@ -33,6 +33,7 @@ const toggleTheme = () =>
 
 btnTheme.addEventListener('click', toggleTheme)
 
+// Hamburger menu
 const displayList = () => {
 	const navUl = document.querySelector('.nav__list')
 
@@ -48,6 +49,18 @@ const displayList = () => {
 }
 
 btnHamburger.addEventListener('click', displayList)
+
+// Close mobile menu when a nav link is clicked
+document.querySelectorAll('.link--nav').forEach((link) => {
+  link.addEventListener('click', () => {
+    const navUl = document.querySelector('.nav__list')
+    if (navUl.classList.contains('display-nav-list')) {
+      btnHamburger.classList.remove('fa-times')
+      btnHamburger.classList.add('fa-bars')
+      navUl.classList.remove('display-nav-list')
+    }
+  })
+})
 
 // Scroll to top button
 const btnScrollTop = document.querySelector('.scroll-top')
@@ -70,6 +83,31 @@ const scrollUp = () => {
 }
 
 document.addEventListener('scroll', scrollUp)
+
+// Active nav highlight on scroll
+const sections = document.querySelectorAll('section[id]')
+const navLinks = document.querySelectorAll('.link--nav')
+
+const highlightNav = () => {
+  const scrollY = window.scrollY + 200
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute('id')
+
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      navLinks.forEach((link) => {
+        link.classList.remove('active')
+        if (link.getAttribute('href') === '#' + sectionId) {
+          link.classList.add('active')
+        }
+      })
+    }
+  })
+}
+
+window.addEventListener('scroll', highlightNav)
 
 // Scroll animations with stagger
 const observerOptions = {
@@ -115,6 +153,39 @@ document.querySelectorAll('.fade-in, .scale-in, .slide-in-left, .slide-in-right'
     observer.observe(el)
   }
 })
+
+// Counter animation for stats
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const counters = entry.target.querySelectorAll('.stat__number')
+      counters.forEach((counter) => {
+        const target = parseInt(counter.dataset.target)
+        const duration = 1500
+        const startTime = performance.now()
+
+        const animate = (currentTime) => {
+          const elapsed = currentTime - startTime
+          const progress = Math.min(elapsed / duration, 1)
+          const eased = 1 - Math.pow(1 - progress, 3)
+          counter.textContent = Math.round(eased * target)
+
+          if (progress < 1) {
+            requestAnimationFrame(animate)
+          }
+        }
+
+        requestAnimationFrame(animate)
+      })
+      counterObserver.unobserve(entry.target)
+    }
+  })
+}, { threshold: 0.5 })
+
+const statsSection = document.querySelector('.stats')
+if (statsSection) {
+  counterObserver.observe(statsSection)
+}
 
 // Typing effect
 const typingElement = document.getElementById('typing-text')
@@ -174,4 +245,11 @@ window.addEventListener('scroll', () => {
     })
     ticking = true
   }
+})
+
+// Remove page-loading class after DOM is ready to enable animations
+requestAnimationFrame(() => {
+  requestAnimationFrame(() => {
+    body.classList.remove('page-loading')
+  })
 })
