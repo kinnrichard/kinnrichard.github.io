@@ -296,16 +296,6 @@ main {
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
-  position: relative;
-}
-
-.project__visit {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  display: inline-block;
-  padding: 0.4em 0.8em;
-  font-size: 0.75rem;
 }
 
 .project:hover {
